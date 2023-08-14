@@ -7,12 +7,12 @@ namespace backend.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class UsuarioController : ControllerBase
+public class DetalleCarritoController : ControllerBase
 {
     private readonly IConfiguration _configuration;
     private readonly string? connectionString;
 
-    public UsuarioController(IConfiguration configuration)
+    public DetalleCarritoController(IConfiguration configuration)
     {
         _configuration = configuration;
         connectionString = _configuration["SqlConnectionString:DefaultConnection"];
@@ -20,12 +20,12 @@ public class UsuarioController : ControllerBase
     }
 
     [HttpGet]
-    [Route("GetAllUsuario")]
-    public IActionResult GetAllUsuario()
+    [Route("GetAllDetalleCarrito")]
+    public IActionResult GetAllDetalleCarrito()
     {
         try
         {
-            var result = UsuariosServicios.ObtenerTodo<Usuarios>();
+            var result = DetalleCarritoServicios.ObtenerTodo<DetalleCarrito>();
             return Ok(result);
         }
         catch (Exception ex)
@@ -36,12 +36,12 @@ public class UsuarioController : ControllerBase
 
 
     [HttpGet]
-    [Route("GetUsuarioById")]
-    public IActionResult GetUsuarioById([FromQuery] int id)
+    [Route("GetDetalleCarritoById")]
+    public IActionResult GetDetalleCarritoById([FromQuery] int id)
     {
         try
         {
-            var result = UsuariosServicios.ObtenerById<Usuarios>(id);
+            var result = DetalleCarritoServicios.ObtenerById<DetalleCarrito>(id);
             return Ok(result);
         }
         catch (Exception ex)
@@ -51,12 +51,12 @@ public class UsuarioController : ControllerBase
     }
 
     [HttpPost]
-    [Route("AddUsuario")]
-    public IActionResult AddUsuario(Usuarios usuarios)
+    [Route("AddDetalleCarrito")]
+    public IActionResult AddDetalleCarrito(DetalleCarrito detalleCarrito)
     {
         try
         {
-            var result = UsuariosServicios.InsertUsuario(usuarios);
+            var result = DetalleCarritoServicios.InsertDetalleCarrito(detalleCarrito);
             return Ok(result);
         }
         catch (Exception ex)
@@ -66,12 +66,12 @@ public class UsuarioController : ControllerBase
     }
 
     [HttpDelete]
-    [Route("DeleteUsuario")]
-    public IActionResult DeleteUsuario([FromQuery] int id)
+    [Route("DeleteDetalleCarrito")]
+    public IActionResult DeleteDetalleCarrito([FromQuery] int id)
     {
         try
         {
-            var result = UsuariosServicios.DeleteUsuario(id);
+            var result = DetalleCarritoServicios.DeleteDetalleCarrito(id);
             return Ok(result);
         }
         catch (Exception ex)
