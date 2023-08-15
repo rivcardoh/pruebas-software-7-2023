@@ -1,4 +1,5 @@
 using Dapper;
+using System.Data;
 using System.Data.SqlClient;
 namespace backend.connection
 {
@@ -26,7 +27,7 @@ namespace backend.connection
             public IEnumerable<T> GetData<T>(string sql){
                 using var connection = new SqlConnection(ConnectionString);
                 connection.Open();
-                DefaultTypeMap.MatchNamesWithUnderscores= true;
+                DefaultTypeMap.MatchNamesWithUnderscores=true;
                 return connection.Query<T>(sql);
             }
 
