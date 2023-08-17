@@ -9,7 +9,7 @@ namespace backend.servicios
     {
         public static IEnumerable<T> ObtenerTodo<T>()
         {
-            const string sql = "select * from DETALLE_CARRITO";
+            const string sql = "EXEC GetDetalleCarrito";
             return BDManager.GetInstance.GetData<T>(sql);//Dapper
         }
 

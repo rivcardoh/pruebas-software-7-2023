@@ -14,7 +14,7 @@ namespace backend.servicios
         }
         public static T ObtenerById<T>(int id)
         {
-            const string sql = "select * from PRODUCTO where ID = @Id and estado_registro=1";
+            const string sql = "EXEC GetProducto";
 
             var parameters = new DynamicParameters();
             parameters.Add("id", id, DbType.Int64);
