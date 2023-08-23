@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Categoria Producto
+      Tab 2
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,16 +13,16 @@
     </ion-toolbar>
   </ion-header>
 
-<ion-item>
-  <ion-input type="text" placeholder="Ingrese el Nombre " [(ngModel)]="nombre"></ion-input>
-  <ion-button (click)="addCategoriaProducto">Agregar Categoria</ion-button>
-</ion-item>
-<br>
-<ion-list>
-  <ion-item *ngFor="let item of listaCategoriaProducto">
-    <b>Nombre</b>:{{item.nombre}}
+  <ion-item>
+    <ion-input type="text" placeholder="Ingrese el Nombre de la Categoria" [(ngModel)]="nombre"></ion-input>
+    <ion-button (click)="addCategoria()">Agregar Categoria</ion-button>
   </ion-item>
-</ion-list>
-
-
-</ion-content>
+  <br>
+  <ion-list>
+    <ion-item *ngFor="let item of listaCategoria">
+      <b>nombre</b>:{{item.nombre}};
+    </ion-item>
+  </ion-list>
+  
+  
+  </ion-content>

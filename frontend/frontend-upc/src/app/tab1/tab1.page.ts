@@ -45,9 +45,6 @@ export class Tab1Page {
   }
 
   public addUsuario(){
-   //console.log(this.nombreCompleto) 
-   //console.log(this.userName) 
-   //console.log(this.password) 
    this.AddUsuarioFromBackend(this.nombreCompleto, this.userName, this.password)
   }
 
@@ -75,7 +72,7 @@ export class Tab1Page {
           console.log(error);
       },
       complete: () => {
-          console.log('complete - this.AddUsuario()');
+          //console.log('complete - this.AddUsuario()');
       },
   });
   }
