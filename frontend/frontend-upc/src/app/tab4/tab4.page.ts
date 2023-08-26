@@ -26,7 +26,7 @@ export class Tab4Page {
     detalleCarritoService: DetalleCarritoService) {
 
     this.getCarritoCompraFromBackend();
-    this.getDetalleCarritoFromBackend();
+/*     this.getDetalleCarritoFromBackend(); */
   }
 
   private getCarritoCompraFromBackend() {
@@ -44,7 +44,7 @@ export class Tab4Page {
     });
   }
 
-  private getDetalleCarritoFromBackend() {
+/*   private getDetalleCarritoFromBackend() {
     this.detalleCarritoService.GetAll().subscribe({
       next: (response: HttpResponse<any>) => {
         this.listaDetalleCarrito = response.body;
@@ -57,7 +57,7 @@ export class Tab4Page {
         //console.log('complete - this.getUsuarios()');
       },
     });
-  }
+  } */
 
 
 }
