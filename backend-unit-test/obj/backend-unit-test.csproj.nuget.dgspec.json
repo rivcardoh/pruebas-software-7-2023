@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\59177\\Documents\\GitHub\\UPC-7\\pruebas-software-7-2023\\backend-unit-test\\backend-unit-test.csproj": {}
+    "c:\\Users\\ASTARA-OVANDO\\Documents\\GitHub\\UPC\\pruebas-software-7-2023\\backend-unit-test\\backend-unit-test.csproj": {}
   },
   "projects": {
-    "c:\\Users\\59177\\Documents\\GitHub\\UPC-7\\pruebas-software-7-2023\\backend-unit-test\\backend-unit-test.csproj": {
+    "c:\\Users\\ASTARA-OVANDO\\Documents\\GitHub\\UPC\\pruebas-software-7-2023\\backend-unit-test\\backend-unit-test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\59177\\Documents\\GitHub\\UPC-7\\pruebas-software-7-2023\\backend-unit-test\\backend-unit-test.csproj",
+        "projectUniqueName": "c:\\Users\\ASTARA-OVANDO\\Documents\\GitHub\\UPC\\pruebas-software-7-2023\\backend-unit-test\\backend-unit-test.csproj",
         "projectName": "backend-unit-test",
-        "projectPath": "c:\\Users\\59177\\Documents\\GitHub\\UPC-7\\pruebas-software-7-2023\\backend-unit-test\\backend-unit-test.csproj",
-        "packagesPath": "C:\\Users\\59177\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\59177\\Documents\\GitHub\\UPC-7\\pruebas-software-7-2023\\backend-unit-test\\obj\\",
+        "projectPath": "c:\\Users\\ASTARA-OVANDO\\Documents\\GitHub\\UPC\\pruebas-software-7-2023\\backend-unit-test\\backend-unit-test.csproj",
+        "packagesPath": "C:\\Users\\ASTARA-OVANDO\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\ASTARA-OVANDO\\Documents\\GitHub\\UPC\\pruebas-software-7-2023\\backend-unit-test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\59177\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ASTARA-OVANDO\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "c:\\Users\\59177\\Documents\\GitHub\\UPC-7\\pruebas-software-7-2023\\backend\\backend.csproj": {
-                "projectPath": "c:\\Users\\59177\\Documents\\GitHub\\UPC-7\\pruebas-software-7-2023\\backend\\backend.csproj"
+              "c:\\Users\\ASTARA-OVANDO\\Documents\\GitHub\\UPC\\pruebas-software-7-2023\\backend\\backend.csproj": {
+                "projectPath": "c:\\Users\\ASTARA-OVANDO\\Documents\\GitHub\\UPC\\pruebas-software-7-2023\\backend\\backend.csproj"
               }
             }
           }
@@ -85,17 +85,17 @@
         }
       }
     },
-    "c:\\Users\\59177\\Documents\\GitHub\\UPC-7\\pruebas-software-7-2023\\backend\\backend.csproj": {
+    "c:\\Users\\ASTARA-OVANDO\\Documents\\GitHub\\UPC\\pruebas-software-7-2023\\backend\\backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\59177\\Documents\\GitHub\\UPC-7\\pruebas-software-7-2023\\backend\\backend.csproj",
+        "projectUniqueName": "c:\\Users\\ASTARA-OVANDO\\Documents\\GitHub\\UPC\\pruebas-software-7-2023\\backend\\backend.csproj",
         "projectName": "backend",
-        "projectPath": "c:\\Users\\59177\\Documents\\GitHub\\UPC-7\\pruebas-software-7-2023\\backend\\backend.csproj",
-        "packagesPath": "C:\\Users\\59177\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\59177\\Documents\\GitHub\\UPC-7\\pruebas-software-7-2023\\backend\\obj\\",
+        "projectPath": "c:\\Users\\ASTARA-OVANDO\\Documents\\GitHub\\UPC\\pruebas-software-7-2023\\backend\\backend.csproj",
+        "packagesPath": "C:\\Users\\ASTARA-OVANDO\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\ASTARA-OVANDO\\Documents\\GitHub\\UPC\\pruebas-software-7-2023\\backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\59177\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ASTARA-OVANDO\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
