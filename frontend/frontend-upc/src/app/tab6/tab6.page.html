@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+     Lista de  Pedidos
+    </ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Pedidos</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Pedido</ion-card-title>
+      <ion-card-subtitle *ngFor="let item of listaPedidos">
+        <b>Usuario</b>:{{item.idUsuario}} <b>Producto</b>:{{item.idProducto}}<b>Proveedor</b>:{{item.idProveedor}}
+      </ion-card-subtitle >
+    </ion-card-header>
+  
+    <ion-card-content *ngFor="let item of listaPedidos">
+      <b>Cantidad</b>:{{item.cantidad}}
+    </ion-card-content>
+  </ion-card>
+  </ion-content>

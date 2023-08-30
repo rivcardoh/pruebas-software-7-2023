@@ -7,12 +7,12 @@ namespace backend.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class ProveedorController : ControllerBase
+public class PedidoController : ControllerBase
 {
     private readonly IConfiguration _configuration;
     private readonly string? connectionString;
 
-    public ProveedorController(IConfiguration configuration)
+    public PedidoController(IConfiguration configuration)
     {
         _configuration = configuration;
         connectionString = _configuration["SqlConnectionString:DefaultConnection"];
@@ -20,12 +20,12 @@ public class ProveedorController : ControllerBase
     }
 
     [HttpGet]
-    [Route("GetAllProveedor")]
-    public IActionResult GetAllProveedor()
+    [Route("GetAllPedido")]
+    public IActionResult GetAllPedido()
     {
         try
         {
-            var result = ProveedorServicios.ObtenerTodo<Proveedor>();
+            var result = PedidoServicios.ObtenerTodo<Pedido>();
             return Ok(result);
         }
         catch (Exception ex)
@@ -36,12 +36,12 @@ public class ProveedorController : ControllerBase
 
 
     [HttpGet]
-    [Route("GetProveedorById")]
-    public IActionResult GetProveedorById([FromQuery] int id)
+    [Route("GetPedidoById")]
+    public IActionResult GetPedidoById([FromQuery] int id)
     {
         try
         {
-            var result = ProveedorServicios.ObtenerById<Proveedor>(id);
+            var result = PedidoServicios.ObtenerById<Pedido>(id);
             return Ok(result);
         }
         catch (Exception ex)
@@ -51,12 +51,12 @@ public class ProveedorController : ControllerBase
     }
 
     [HttpPost]
-    [Route("AddProveedor")]
-    public IActionResult AddProveedor(Proveedor proveedor)
+    [Route("AddPedido")]
+    public IActionResult AddPedido(Pedido pedido)
     {
         try
         {
-            var result = ProveedorServicios.InsertProveedor(proveedor);
+            var result = PedidoServicios.InsertPedido(pedido);
             return Ok(result);
         }
         catch (Exception ex)
@@ -66,12 +66,12 @@ public class ProveedorController : ControllerBase
     }
 
     [HttpDelete]
-    [Route("DeleteProveedor")]
-    public IActionResult DeleteProveedor([FromQuery] int id)
+    [Route("DeletePedido")]
+    public IActionResult DeletePedido([FromQuery] int id)
     {
         try
         {
-            var result = ProveedorServicios.DeleteProveedor(id);
+            var result = PedidoServicios.DeletePedido(id);
             return Ok(result);
         }
         catch (Exception ex)
@@ -81,12 +81,12 @@ public class ProveedorController : ControllerBase
     }
 
     [HttpPut]
-    [Route("UpdateProveedor")]
-    public IActionResult UpdateProveedor(Proveedor proveedor)
+    [Route("UpdatePedido")]
+    public IActionResult UpdatePedido(Pedido pedido)
     {
         try
         {
-            var result = ProveedorServicios.UpdateProveedor(proveedor);
+            var result = PedidoServicios.UpdatePedido(pedido);
             return Ok(result);
         }
         catch (Exception ex)

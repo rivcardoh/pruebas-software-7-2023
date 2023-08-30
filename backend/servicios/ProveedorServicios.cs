@@ -43,6 +43,18 @@ namespace backend.servicios
             var result = BDManager.GetInstance.SetData(sql, parameters);
             return result;
         }
+
+        public static int UpdateProveedor(Proveedor proveedor)
+        {
+            const string sql = "Update PROVEEDOR SET NOMBRE_PROVEEDOR=@NOMBRE_PROVEEDOR where ID = @Id ";
+
+            var parameters = new DynamicParameters();
+            parameters.Add("ID", proveedor.Id, DbType.String);
+            parameters.Add("NOMBRE_PROVEEDOR", proveedor.NombreProveedor, DbType.String);
+
+            var result = BDManager.GetInstance.SetData(sql, parameters);
+            return result;
+        }
     }
 
 }
