@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-     Lista de  Pedidos
+      <ion-icon name="file-tray-full-outline"></ion-icon> Pedidos
     </ion-title>
 
   </ion-toolbar>
@@ -14,16 +14,26 @@
     </ion-toolbar>
   </ion-header>
 
+  <ion-item>
+    <ion-input id="idProveedor" type="text" placeholder="Ingrese el proveedor" [(ngModel)]="idProveedor"></ion-input>
+    <ion-input id="idProducto" type="text" placeholder="Ingrese el producto" [(ngModel)]="idProducto"></ion-input>
+    <ion-input id="idUsuario" type="text" placeholder="Ingrese el usuario" [(ngModel)]="idUsuario"></ion-input>
+    <ion-input id="cantidad" type="text" placeholder="Ingrese la Cantidad" [(ngModel)]="cantidad"></ion-input>
+    <ion-button id="addPedido" (click)="addPedido()"><ion-icon name="add-outline"></ion-icon> Agregar Pedido</ion-button>
+  </ion-item>
   <ion-card>
     <ion-card-header>
-      <ion-card-title>Pedido</ion-card-title>
-      <ion-card-subtitle *ngFor="let item of listaPedidos">
-        <b>Usuario</b>:{{item.idUsuario}} <b>Producto</b>:{{item.idProducto}}<b>Proveedor</b>:{{item.idProveedor}}
-      </ion-card-subtitle >
+      <ion-card-title>Lista de Pedidos</ion-card-title>
     </ion-card-header>
-  
-    <ion-card-content *ngFor="let item of listaPedidos">
-      <b>Cantidad</b>:{{item.cantidad}}
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let item of listaPedidos">
+          <ion-label>ID: {{item.id}} | Proveedor:{{item.idProveedor}} | Producto:{{item.idProducto}} | Usuario:{{item.idUsuario}} | Cantidad:{{item.cantidad}}
+          </ion-label>
+          <ion-button id="getById" (click)="GetByIdPedido(item.id)" color="secondary"><ion-icon name="eye-outline"></ion-icon></ion-button>
+          <ion-button id="deleteItem" (click)="DeletePedido(item.id)" color="danger"><ion-icon name="trash-outline"></ion-icon></ion-button>
+        </ion-item>
+      </ion-list>
     </ion-card-content>
   </ion-card>
-  </ion-content>
+  <ion-card>

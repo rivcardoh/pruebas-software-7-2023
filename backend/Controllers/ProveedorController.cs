@@ -2,9 +2,9 @@ using backend.connection;
 using backend.entidades;
 using backend.servicios;
 using Microsoft.AspNetCore.Mvc;
-
+using Microsoft.AspNetCore.Cors;
 namespace backend.Controllers;
-
+[EnableCors("CorsDev")]
 [ApiController]
 [Route("api/[controller]")]
 public class ProveedorController : ControllerBase

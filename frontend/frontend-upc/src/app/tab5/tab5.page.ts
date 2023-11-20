@@ -3,13 +3,14 @@ import { ProveedorService } from '../servicios-backend/proveedor/proveedor.servi
 import { HttpResponse } from '@angular/common/http';
 import { Proveedor } from '../entidades/proveedor';
 
+
 @Component({
   selector: 'app-tab5',
   templateUrl: 'tab5.page.html',
   styleUrls: ['tab5.page.scss']
 })
 export class Tab5Page {
-
+  public id: any
   public nombreProveedor  = ""
   public listaProveedor: Proveedor[] = []
 
@@ -39,13 +40,14 @@ export class Tab5Page {
   private AddProveedorFromBackend(nombreProveedor: string){
 
     var proveedprEntidad = new Proveedor();
+
     proveedprEntidad.nombreProveedor = nombreProveedor;
 
     this.ProveedorService.Add(proveedprEntidad).subscribe({
       next: (response: HttpResponse<any>) => {
           console.log(response.body)//1
           if(response.body == 1){
-              alert("Se agrego la CATEGORIA con exito :)");
+              alert("Se agrego El proveedor con exito :)");
               this.getProveedorFromBackend();//Se actualize el listado
               this.nombreProveedor = "";
           }else{
@@ -60,5 +62,29 @@ export class Tab5Page {
       },
   });
   }
+  public DeleteProveedor(id: number){
+    this.deleteItem(id)
+   }
+  private deleteItem(id: number) {
+    
+    this.ProveedorService.deleteItem(id).subscribe(
+      
+      response => {
+        alert('Registro eliminado con éxito');
+        this.getProveedorFromBackend();
+        // Realiza cualquier acción adicional después de la eliminación
+      });
+  }
 
+  public GetByIdProveedor(id: number){
+    this.getByID(id)
+   }
+  private getByID(id: number) {
+    
+    this.ProveedorService.getById(id).subscribe(
+      
+      response => {
+        alert(JSON.stringify( response.body));
+      });
+  }
 }

@@ -30,10 +30,10 @@ namespace backend.servicios
             const string sql = "INSERT INTO [dbo].[PEDIDO]([ID_PROVEEDOR], [ID_PRODUCTO], [ID_USUARIO], [CANTIDAD]) VALUES (@id_proveedor, @id_producto, @id_usuario, @cantidad)";
 
             var parameters = new DynamicParameters();
-            parameters.Add("id_proveedor", pedido.IdProveedor, DbType.Int64);
-            parameters.Add("id_producto", pedido.IdProducto, DbType.Int64);
-            parameters.Add("id_usuario", pedido.IdUsuario, DbType.Int64);
-            parameters.Add("cantidad", pedido.Cantidad, DbType.Int64);
+            parameters.Add("id_proveedor", pedido.IdProveedor, DbType.String);
+            parameters.Add("id_producto", pedido.IdProducto, DbType.String);
+            parameters.Add("id_usuario", pedido.IdUsuario, DbType.String);
+            parameters.Add("cantidad", pedido.Cantidad, DbType.String);
 
             var result = BDManager.GetInstance.SetData(sql, parameters);
             return result;
@@ -55,9 +55,9 @@ namespace backend.servicios
             var parameters = new DynamicParameters();
             parameters.Add("ID", pedido.Id, DbType.String);
             parameters.Add("ID_PROVEEDOR", pedido.IdProveedor, DbType.String);
-            parameters.Add("ID_PRODUCTO", pedido.IdProducto, DbType.Int64);
-            parameters.Add("ID_USUARIO", pedido.IdUsuario, DbType.Int64);
-            parameters.Add("CANTIDAD", pedido.Cantidad, DbType.Int64);
+            parameters.Add("ID_PRODUCTO", pedido.IdProducto, DbType.String);
+            parameters.Add("ID_USUARIO", pedido.IdUsuario, DbType.String);
+            parameters.Add("CANTIDAD", pedido.Cantidad, DbType.String);
 
             var result = BDManager.GetInstance.SetData(sql, parameters);
             return result;
